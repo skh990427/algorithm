@@ -5,12 +5,13 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
         String result = "";
+        int range = 'a' - 'A';
         
         for(int i = 0 ; i < a.length() ; i++) {
-            if(a.charAt(i) >= 65 && a.charAt(i) <= 90) {
-                result += (char) (a.charAt(i) + 32);
+            if(a.charAt(i) >= 'A' && a.charAt(i) <= 'Z') {
+                result += (char) (a.charAt(i) + range);
             } else {
-                result += (char) (a.charAt(i) - 32);
+                result += (char) (a.charAt(i) - range);
             }
         }
         
