@@ -6,12 +6,10 @@ class Solution {
         
         Map<Integer, Integer> map = new HashMap<>();
         for(String str : strArr) {
-            map.put(str.length(), map.getOrDefault(str.length(), 0) + 1);
-        }
-        
-        List<Integer> keys = new ArrayList<>(map.keySet());
-        for(Integer key : keys) {
-            answer = Math.max(map.get(key), answer);
+            int key = str.length();
+            int value = map.getOrDefault(str.length(), 0) + 1;
+            map.put(key, value);
+            answer = Math.max(value, answer);
         }
         
         return answer;
