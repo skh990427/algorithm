@@ -1,10 +1,8 @@
 class Solution {
     public long solution(int a, int b) {
         long answer = 0;
-        int min = Math.min(a, b);
-        int max = Math.max(a, b);
-        while(min <= max)
-            answer += min++;
-        return answer;
+        long min = Math.min(a, b);
+        long max = Math.max(a, b);
+        return (max - min + 1) * (min + max) / 2;
     }
 }
