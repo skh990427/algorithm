@@ -1,0 +1,23 @@
+class Solution {
+    public String solution(int[] numLog) {
+        String answer = "";
+        for(int i = 0 ; i < numLog.length - 1 ; i++) {
+            int cmd = numLog[i + 1] - numLog[i];
+            switch (cmd) {
+                case 1:
+                    answer += "w";
+                    break;
+                case -1:
+                    answer += "s";
+                    break;
+                case 10:
+                    answer += "d";
+                    break;
+                default:
+                    answer += "a";
+                    break;
+            }
+        }
+        return answer;
+    }
+}
