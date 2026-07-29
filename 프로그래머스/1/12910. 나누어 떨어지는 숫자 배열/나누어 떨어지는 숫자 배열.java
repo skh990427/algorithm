@@ -1,0 +1,19 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr, int divisor) {
+        int count = 0;
+        for(int num : arr)
+            if(num % divisor == 0)
+                count++;
+        
+        int[] answer = new int[count];
+        int index = 0;
+        for(int num : arr)
+            if(num % divisor == 0)
+                answer[index++] = num;
+        
+        Arrays.sort(answer);
+        return answer.length > 0 ? answer : new int[]{-1};
+    }
+}
